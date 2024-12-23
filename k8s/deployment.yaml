@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: crpi-fierbpua1f5su3ae.cn-zhangjiakou.personal.cr.aliyuncs.com/islilacok/learnner:ynyn
+        ports:
+        - containerPort: 80
