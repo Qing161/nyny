@@ -17,5 +17,5 @@ jobs:
       run: |
         curl -X POST \
           -u admin:D1iXi9xlaDFK86hJ6hlVyG \
-          --data token=123456 \
+          --data token=116aebbc480c42984460cfb0f86aa8ecc1 \
           https://xn--fiq06j.xn--fiqurg83j.xn--fiqs8s/jenkins/job/test-k/?token=123456
