@@ -1,0 +1,21 @@
+# .github/workflows/release-notification-to-jenkins.yml
+name: Notify Jenkins on Release Published
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  notify-jenkins:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Notify Jenkins
+      run: |
+        curl -X POST \
+          -u admin:D1iXi9xlaDFK86hJ6hlVyG  \
+          -d token=123456 \
+          https://your-jenkins-instance.com/job/your-job-name/build
